@@ -5,10 +5,23 @@
 - Compile this repo with JDK 11
 - Always do `maven clean` before pushing
 
-### OOP Notes
+## Fix Log
 
-- All interface modifiers are implicitly public. 
+2021/03/24
+
+- changed ItemSubjectService class to Singleton pattern 
 
 ```java
+private static ItemSubjectService INSTANCE;
 
+public static ItemSubjectService getINSTANCE() {
+    if (INSTANCE == null) {
+        INSTANCE = new ItemSubjectService();
+    }
+    return INSTANCE;
+}
 ```
+
+Minor Note:
+
+- All interface modifiers are implicitly public. 

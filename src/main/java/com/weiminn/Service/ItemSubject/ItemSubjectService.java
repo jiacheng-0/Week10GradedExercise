@@ -10,6 +10,15 @@ import java.util.ArrayList;
 
 public class ItemSubjectService implements ServiceInterface, ItemSubjectInterface {
 
+    private static ItemSubjectService INSTANCE;
+
+    public static ItemSubjectService getINSTANCE() {
+        if (INSTANCE == null) {
+            INSTANCE = new ItemSubjectService();
+        }
+        return INSTANCE;
+    }
+
     ArrayList<ItemObserverInterface> observers = new ArrayList<>();
 
     @Override
@@ -18,7 +27,7 @@ public class ItemSubjectService implements ServiceInterface, ItemSubjectInterfac
 
         if (command.commandType == CommandType.REGISTER) {
             register(new SubscriberA());
-            System.out.println("Registered 1 observer");
+            System.out.println("Registered 1 Subscriber");
         } else if (command.commandType == CommandType.UNREGISTER) {
             unregister(new SubscriberA());
         }
@@ -28,7 +37,6 @@ public class ItemSubjectService implements ServiceInterface, ItemSubjectInterfac
     @Override
     public void register(ItemObserverInterface anObserver) {
         observers.add(anObserver);
-        System.out.println("Current size: " + observers.size());
     }
 
     @Override
@@ -38,7 +46,7 @@ public class ItemSubjectService implements ServiceInterface, ItemSubjectInterfac
 
     @Override
     public void notifyRegisteredUsers() {
-        // System.out.println("Notifying: " + observers.size());
+        System.out.println("Total: " + observers.size() + " subscribers");
         for (ItemObserverInterface observer: observers) {
             observer.update();
         }

@@ -6,6 +6,6 @@ import com.weiminn.Service.ServiceFactoryInterface;
 public class ItemSubjectServiceFactory implements ServiceFactoryInterface {
     @Override
     public void invokeService(Command command) {
-        new ItemSubjectService().processService(command);
+        ItemSubjectService.getINSTANCE().processService(command);
     }
 }
