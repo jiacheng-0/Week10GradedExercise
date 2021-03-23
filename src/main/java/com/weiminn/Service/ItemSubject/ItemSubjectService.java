@@ -1,6 +1,7 @@
 package com.weiminn.Service.ItemSubject;
 
 import com.weiminn.Command;
+import com.weiminn.CommandType;
 import com.weiminn.Observer.ItemObserverInterface;
 import com.weiminn.Observer.SubscriberA;
 import com.weiminn.Service.ServiceInterface;
@@ -13,14 +14,21 @@ public class ItemSubjectService implements ServiceInterface, ItemSubjectInterfac
 
     @Override
     public void processService(Command command) {
-        System.out.println("Item Subject: " + command.toString());
-        register(new SubscriberA());
+        System.out.println("Processing Item Subject: " + command.commandType);
+
+        if (command.commandType == CommandType.REGISTER) {
+            register(new SubscriberA());
+            System.out.println("Registered 1 observer");
+        } else if (command.commandType == CommandType.UNREGISTER) {
+            unregister(new SubscriberA());
+        }
         notifyRegisteredUsers();
     }
 
     @Override
     public void register(ItemObserverInterface anObserver) {
         observers.add(anObserver);
+        System.out.println("Current size: " + observers.size());
     }
 
     @Override
@@ -30,7 +38,7 @@ public class ItemSubjectService implements ServiceInterface, ItemSubjectInterfac
 
     @Override
     public void notifyRegisteredUsers() {
-        System.out.println("Notifying: " + observers.size());
+        // System.out.println("Notifying: " + observers.size());
         for (ItemObserverInterface observer: observers) {
             observer.update();
         }
