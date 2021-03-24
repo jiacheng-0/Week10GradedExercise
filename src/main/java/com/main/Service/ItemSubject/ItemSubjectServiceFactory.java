@@ -1,7 +1,7 @@
-package com.weiminn.Service.ItemSubject;
+package com.main.Service.ItemSubject;
 
-import com.weiminn.Command;
-import com.weiminn.Service.ServiceFactoryInterface;
+import com.main.Command;
+import com.main.Service.ServiceFactoryInterface;
 
 public class ItemSubjectServiceFactory implements ServiceFactoryInterface {
     @Override

@@ -1,4 +1,4 @@
-package com.weiminn;
+package com.main;
 
 public class Command {
     public CommandType commandType;

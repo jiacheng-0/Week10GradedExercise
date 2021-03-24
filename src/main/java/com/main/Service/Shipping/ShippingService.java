@@ -1,7 +1,7 @@
-package com.weiminn.Service.Shipping;
+package com.main.Service.Shipping;
 
-import com.weiminn.Command;
-import com.weiminn.Service.ServiceInterface;
+import com.main.Command;
+import com.main.Service.ServiceInterface;
 
 public class ShippingService implements ServiceInterface {
     @Override

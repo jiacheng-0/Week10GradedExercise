@@ -1,4 +1,4 @@
-package com.weiminn.Observer;
+package com.main.Observer;
 
 public interface ItemObserverInterface {
     void update();

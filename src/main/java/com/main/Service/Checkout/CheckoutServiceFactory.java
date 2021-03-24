@@ -1,7 +1,7 @@
-package com.weiminn.Service.Checkout;
+package com.main.Service.Checkout;
 
-import com.weiminn.Service.ServiceFactoryInterface;
-import com.weiminn.*;
+import com.main.Service.ServiceFactoryInterface;
+import com.main.*;
 
 public class CheckoutServiceFactory implements ServiceFactoryInterface {
     @Override

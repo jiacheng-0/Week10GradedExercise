@@ -1,7 +1,7 @@
-package com.weiminn.Service.Payment;
+package com.main.Service.Payment;
 
-import com.weiminn.Command;
-import com.weiminn.Service.ServiceInterface;
+import com.main.Command;
+import com.main.Service.ServiceInterface;
 
 public class PaymentService implements ServiceInterface {
     @Override

@@ -1,7 +1,7 @@
-package com.weiminn.Service.Payment;
+package com.main.Service.Payment;
 
-import com.weiminn.Command;
-import com.weiminn.Service.ServiceFactoryInterface;
+import com.main.Command;
+import com.main.Service.ServiceFactoryInterface;
 
 public class PaymentServiceFactory implements ServiceFactoryInterface {
 

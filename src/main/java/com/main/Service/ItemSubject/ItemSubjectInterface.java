@@ -1,6 +1,6 @@
-package com.weiminn.Service.ItemSubject;
+package com.main.Service.ItemSubject;
 
-import com.weiminn.Observer.ItemObserverInterface;
+import com.main.Observer.ItemObserverInterface;
 
 public interface ItemSubjectInterface {
 

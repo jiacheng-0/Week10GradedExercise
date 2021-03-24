@@ -1,7 +1,7 @@
-package com.weiminn.Service.Shipping;
+package com.main.Service.Shipping;
 
-import com.weiminn.Command;
-import com.weiminn.Service.ServiceFactoryInterface;
+import com.main.Command;
+import com.main.Service.ServiceFactoryInterface;
 
 public class ShippingServiceFactory implements ServiceFactoryInterface {
 

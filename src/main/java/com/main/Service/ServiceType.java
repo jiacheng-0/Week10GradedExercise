@@ -1,4 +1,4 @@
-package com.weiminn.Service;
+package com.main.Service;
 
 public enum ServiceType {
     CheckoutService,

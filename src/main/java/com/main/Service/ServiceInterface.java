@@ -1,6 +1,6 @@
-package com.weiminn.Service;
+package com.main.Service;
 
-import com.weiminn.Command;
+import com.main.Command;
 
 public interface ServiceInterface {
     void processService(Command command);

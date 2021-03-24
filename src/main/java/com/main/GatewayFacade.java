@@ -1,10 +1,10 @@
-package com.weiminn;
+package com.main;
 
-import com.weiminn.Service.Checkout.CheckoutServiceFactory;
-import com.weiminn.Service.ItemSubject.ItemSubjectServiceFactory;
-import com.weiminn.Service.Payment.PaymentServiceFactory;
-import com.weiminn.Service.ServiceType;
-import com.weiminn.Service.Shipping.ShippingServiceFactory;
+import com.main.Service.Checkout.CheckoutServiceFactory;
+import com.main.Service.ItemSubject.ItemSubjectServiceFactory;
+import com.main.Service.Payment.PaymentServiceFactory;
+import com.main.Service.ServiceType;
+import com.main.Service.Shipping.ShippingServiceFactory;
 
 public class GatewayFacade {
 

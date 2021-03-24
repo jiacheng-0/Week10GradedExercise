@@ -1,10 +1,10 @@
-package com.weiminn.Service.ItemSubject;
+package com.main.Service.ItemSubject;
 
-import com.weiminn.Command;
-import com.weiminn.CommandType;
-import com.weiminn.Observer.ItemObserverInterface;
-import com.weiminn.Observer.SubscriberA;
-import com.weiminn.Service.ServiceInterface;
+import com.main.Command;
+import com.main.CommandType;
+import com.main.Observer.ItemObserverInterface;
+import com.main.Observer.SubscriberA;
+import com.main.Service.ServiceInterface;
 
 import java.util.ArrayList;
 

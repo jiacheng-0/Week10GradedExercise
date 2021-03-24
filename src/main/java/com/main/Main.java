@@ -1,6 +1,6 @@
-package com.weiminn;
+package com.main;
 
-import com.weiminn.Service.ServiceType;
+import com.main.Service.ServiceType;
 
 public class Main {
     public static void main(String[] args) {
