@@ -8,17 +8,14 @@ import com.main.Service.Shipping.ShippingServiceFactory;
 
 public class GatewayFacade {
 
-    private GatewayFacade() {
-    }
-
-    ;
+    private GatewayFacade() {};
 
     private static GatewayFacade INSTANCE;
 
     public static GatewayFacade getGatewayFacade() {
         if (INSTANCE == null) {
             INSTANCE = new GatewayFacade();
-            System.out.println("GatewayFacade INSTANCE Instantiated");
+            // System.out.println("GatewayFacade INSTANCE Instantiated");
         }
         return INSTANCE;
     }

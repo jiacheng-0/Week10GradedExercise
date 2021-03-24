@@ -3,7 +3,6 @@ package com.main.Service.ItemSubject;
 import com.main.Command;
 import com.main.CommandType;
 import com.main.Observer.ItemObserverInterface;
-import com.main.Observer.SubscriberA;
 import com.main.Service.ServiceInterface;
 
 import java.util.ArrayList;
@@ -26,12 +25,14 @@ public class ItemSubjectService implements ServiceInterface, ItemSubjectInterfac
         System.out.println("Processing Item Subject: " + command.commandType);
 
         if (command.commandType == CommandType.REGISTER) {
-            register(new SubscriberA());
+            register(command.observer);
             System.out.println("Registered 1 Subscriber");
         } else if (command.commandType == CommandType.UNREGISTER) {
-            unregister(new SubscriberA());
+            unregister(command.observer);
+            System.out.println("De-Registered 1 Subscriber");
+        } else if (command.commandType == CommandType.NOTIFY) {
+            notifyRegisteredUsers();
         }
-        notifyRegisteredUsers();
     }
 
     @Override
